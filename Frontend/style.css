@@ -1,0 +1,143 @@
+*{
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #141622;
+}
+
+h1{
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+input[type="text"]{
+    width: 30rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    background-color: #1e1e2f;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+input[type="text"]:focus{
+    outline: none;
+    background-color: #2e2e3f;
+}
+
+select{
+    width: 25rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    background-color: #1e1e2f;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35%;
+}
+
+select:focus{
+    outline: none;
+    background-color: #2e2e3f;
+}
+
+option{
+    background-color: #1e1e2f;
+    color: #fff;
+}
+
+option:hover{
+    background-color: #2e2e3f;
+}
+
+option:active{
+    background-color: #2e2e3f;
+}
+
+button {
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    background: linear-gradient(90deg, #5faaff, #68bf49);
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+}
+
+button:hover:not(:disabled){
+    transform: translateX(-50%) scale(1.05);
+    cursor: pointer;
+}
+
+button:active:not(:disabled){
+    cursor: pointer;
+    transform: translateX(-50%) scale(0.95);
+}
+
+button:disabled{
+    background: linear-gradient(90deg, #5faaff, #68bf49);
+    opacity: 0.5;
+}
+
+.info{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 21.5rem;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: #141622;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+footer img{
+    width: 3rem;
+    height: 3rem;
+    margin-left: 0.5rem;
+    margin-bottom: -0.5rem;
+}
+
+.git{
+    transition: all 0.2s ease-in-out;
+}
+
+.git:hover{
+    cursor:pointer;
+    transform: scale(1.05);
+}

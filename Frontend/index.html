@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+<body>
+    <h1>YouTube Downloader</h1>
+    <input type="text" placeholder="YouTube Link" class="center-horizontal" id="LinkInput">
+    <select id="VideoTypeSelector">
+        <option value="">Video Type (Select)</option>
+        <option value="Video">Video</option>
+        <option value="Audio">Audio</option>
+    </select>
+    <p class="info" hidden id="Info">Link is invalid!</p>
+    <button class="center-horizontal" disabled id="DownloadButton">Download</button>
+
+    <footer>
+        <img src="github.png" class="git" onclick="open('https://github.com/mrdiamonddog/simpleytdownloader')"></img>
+    </footer>
+
+    <script src="downloader.js"></script>
+</body>
+</html>
