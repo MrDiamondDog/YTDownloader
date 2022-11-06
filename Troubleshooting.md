@@ -6,7 +6,7 @@ Most likely, your video is not downloading because:
 3. The video is private or region locked
 4. It is a movie
 
-## Region Locked Content
+## Rate Limiting
 YouTube can block your IP if you send too many requests to download a video.
 
 You can get around this using a proxy or VPN.
