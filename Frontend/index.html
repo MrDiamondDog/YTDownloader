@@ -11,15 +11,20 @@
     <input type="text" placeholder="YouTube Link" class="center-horizontal" id="LinkInput">
     <select id="VideoTypeSelector">
         <option value="">Video Type (Select)</option>
-        <option value="Video">Video</option>
-        <option value="Audio">Audio</option>
+        <option value="Video-MP4">Video (mp4)</option>
+        <option value="Video-MOV">Video (mov)</option>
+        <option value="Audio-MP3">Audio (mp3)</option>
+        <option value="Audio-OGG">Audio (ogg)</option>
+        <option value="Audio-WAV">Audio (wav)</option>
+        <option value="Audio-M4A">Audio (m4a)</option>
     </select>
     <p class="info" hidden id="Info">Link is invalid!</p>
     <button class="center-horizontal" disabled id="DownloadButton">Download</button>
 
-    <footer>
-        <img src="github.png" class="git" onclick="open('https://github.com/mrdiamonddog/simpleytdownloader')"></img>
-    </footer>
+    <img src="github.png" class="git" onclick="require('electron').shell.openExternal('https://github.com/MrDiamondDog/YTDownloader')"></img>
+
+    <p class="footer-text-2">The downloader will not work on rental movies, regionally restricted content, or private videos.</p>
+    <p class="footer-text">If the video download still does not work, see the <a href="#" onclick='require("electron").shell.openExternal("https://github.com/MrDiamondDog/YTDownloader/blob/master/Troubleshooting.md")'>troubleshooting guide</a>.</p>
 
     <script src="downloader.js"></script>
 </body>

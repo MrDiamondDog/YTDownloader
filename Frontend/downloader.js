@@ -39,11 +39,16 @@ async function Download(){
     const VideoQuality = "highest";
     const AudioQuality = "highest";
 
-    if (VideoType == "Video"){
+    if (VideoType.startsWith("Video")){
         const video = ytdl(Link, {
             quality: VideoQuality
         });
-        const videoName = Info.videoDetails.title.replace(/[^\w\s]/gi, '') + ".mp4";
+        var videoName = "";
+        if (VideoType == "Video-MP4"){
+            videoName = Info.videoDetails.title.replace(/[^\w\s]/gi, '') + ".mp4";
+        } else if (VideoType == "Video-MOV"){
+            videoName = Info.videoDetails.title.replace(/[^\w\s]/gi, '') + ".mov";
+        }
         const filePath = await ipcRenderer.invoke("filePathPrompt", videoName);
         if (filePath == undefined){
             return;
@@ -51,11 +56,20 @@ async function Download(){
         video.pipe(fs.createWriteStream(filePath));
     }
 
-    if (VideoType == "Audio"){
+    if (VideoType.startsWith("Audio")){
         const video = ytdl(Link, {
             quality: AudioQuality
         });
-        const videoName = Info.videoDetails.title.replace(/[^\w\s]/gi, '') + ".mp3";
+        var videoName = "";
+        if (VideoType == "Audio-MP3"){
+            videoName = Info.videoDetails.title.replace(/[^\w\s]/gi, '') + ".mp3";
+        } else if (VideoType == "Audio-M4A"){
+            videoName = Info.videoDetails.title.replace(/[^\w\s]/gi, '') + ".m4a";
+        } else if (VideoType == "Audio-WAV"){
+            videoName = Info.videoDetails.title.replace(/[^\w\s]/gi, '') + ".wav";
+        } else if (VideoType == "Audio-OGG"){
+            videoName = Info.videoDetails.title.replace(/[^\w\s]/gi, '') + ".ogg";
+        }
         const filePath = await ipcRenderer.invoke("filePathPrompt", videoName);
         if (filePath == undefined){
             return;

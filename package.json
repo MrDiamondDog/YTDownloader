@@ -1,11 +1,14 @@
 {
   "name": "simpleytdownloader",
   "version": "1.0.0",
+  "authors": [
+    "MrDiamond"
+  ],
   "description": "A simple YouTube video/audio downloader",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "make": "electron-packager . \"YT Downloader\" --platform=win32 --arch=x64 --overwrite"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +16,8 @@
     "electron": "^21.2.2"
   },
   "dependencies": {
-    "@electron/remote": "^2.0.8",
+    "electron-squirrel-startup": "^1.0.0",
+    "shell": "^0.9.4",
     "ytdl": "^1.4.1",
     "ytdl-core": "^4.11.2"
   }
